@@ -6965,6 +6965,8 @@ typedef struct
   #include "stm32f4xx_conf.h"
 #endif /* USE_STDPERIPH_DRIVER */
 
+#include "stm32f4xx_conf.h"
+
 /** @addtogroup Exported_macro
   * @{
   */
