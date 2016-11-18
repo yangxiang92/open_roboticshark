@@ -657,6 +657,8 @@ int stm32_hw_usart_init(void)
 {
     struct stm32_uart *uart;
     struct serial_configure config = RT_SERIAL_CONFIG_DEFAULT;
+    struct serial_configure my_config = config;
+    my_config.baud_rate = BAUD_RATE_9600;
 
     RCC_Configuration();
     GPIO_Configuration();
@@ -695,7 +697,7 @@ int stm32_hw_usart_init(void)
     uart = &uart3;
 
     serial3.ops    = &stm32_uart_ops;
-    serial3.config = config;
+    serial3.config = my_config;
 
     NVIC_Configuration(&uart3);
 
