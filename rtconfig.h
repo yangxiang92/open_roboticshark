@@ -72,6 +72,10 @@
 /* Using Hardware Timer framework */
 //#define RT_USING_HWTIMER
 
+/* Using IIC framework (bit ops) */
+#define RT_USING_I2C
+#define RT_USING_I2C_BITOPS
+
 /* SECTION: Console options */
 #define RT_USING_CONSOLE
 /* the buffer size of console*/
